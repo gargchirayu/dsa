@@ -9,7 +9,9 @@ public:
         int high = n1;
         
         while(low<=high){
+            //counting how many elements to consider from array 1
             int nums1ctr = (low+high)>>1;
+            //we need n1+n2+1/2 th element as answer, so if we picked nums1ctr from array 1,rest we                 get from array 2
             int nums2ctr = (n1+n2+1)/2 - nums1ctr;
             
             int l1 = (nums1ctr==0)?INT_MIN : nums1[nums1ctr-1];
