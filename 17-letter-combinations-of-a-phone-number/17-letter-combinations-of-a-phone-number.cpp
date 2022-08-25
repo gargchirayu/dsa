@@ -1,7 +1,7 @@
 class Solution {
 private: 
     vector<string> map = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-    void helper(int ind, string cur, string &digits, vector<string> &ans){
+    void helper(int ind, string &cur, string &digits, vector<string> &ans){
         if(ind==digits.size()) {
             if(cur == "") return;
             ans.push_back(cur);
@@ -16,7 +16,8 @@ private:
 public:
     vector<string> letterCombinations(string digits) {
         vector<string> ans;
-        helper(0, "", digits, ans);
+        string cur = "";
+        helper(0, cur, digits, ans);
         return ans;
     }
 };
