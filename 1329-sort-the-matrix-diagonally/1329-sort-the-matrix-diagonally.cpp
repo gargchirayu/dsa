@@ -17,10 +17,8 @@ public:
         for(int i=1; i<m; i++){
             vector<int> diag;
             for(int x = i, y = 0; x<m and y<n; x++, y++){
-                cout<<x<<"-"<<y<<" ";
                 diag.push_back(mat[x][y]);
             }
-            cout<<".";
             sort(diag.begin(), diag.end());
             for(int x = i, y = 0, k=0; x<m and y<n; x++, y++, k++){
                 mat[x][y] = diag[k];
